@@ -1,9 +1,6 @@
 package tn.esprit.arctic.championnat1.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class DetailChampionnat {
@@ -12,6 +9,7 @@ public class DetailChampionnat {
     private Long idDetailchampionnat ;
     private String code ;
     private String desctiption ;
-
+    @OneToOne(mappedBy="championnatDetail")
+    private Championnat championnat;
 
 }

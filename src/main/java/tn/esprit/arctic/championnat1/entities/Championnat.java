@@ -1,10 +1,9 @@
 package tn.esprit.arctic.championnat1.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jdk.jfr.Category;
+
+import java.util.List;
 
 @Entity
 public class Championnat {
@@ -14,4 +13,9 @@ public class Championnat {
     private Categorie categorie ;
     private String libelleC ;
     private Integer annee ;
+    @OneToOne
+    private DetailChampionnat championnatDetail;
+
+    @ManyToMany(cascade = CascadeType.PERSIST,fetch=FetchType.EAGER)
+    private List<Course> courses;
 }
