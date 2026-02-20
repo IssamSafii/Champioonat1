@@ -1,10 +1,13 @@
 package tn.esprit.arctic.championnat1.Services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.championnat1.entities.Sponsor;
 import tn.esprit.arctic.championnat1.Repository.SponsorRepository;
 
 import java.util.List;
-
+@AllArgsConstructor
+@Service
 public class SponsorService implements ISponsorService{
     SponsorRepository sp;
 

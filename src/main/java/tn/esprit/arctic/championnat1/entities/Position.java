@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Position {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idPosition ;
+    private Long idPosition ;
     private String classement ;
     private String nbPoints ;
     @ManyToOne

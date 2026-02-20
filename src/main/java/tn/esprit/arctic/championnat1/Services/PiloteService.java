@@ -1,7 +1,10 @@
 package tn.esprit.arctic.championnat1.Services;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.arctic.championnat1.entities.Pilote;
 import tn.esprit.arctic.championnat1.Repository.PiloteRepository;
-
+@AllArgsConstructor
+@Service
 public class PiloteService implements IPiloteService {
     PiloteRepository pr;
     @Override
