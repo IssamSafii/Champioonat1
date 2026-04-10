@@ -1,6 +1,10 @@
 package tn.esprit.arctic.championnat1.entities;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Contrat {
     @Id
